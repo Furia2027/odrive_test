@@ -1,0 +1,204 @@
+{
+  "_instructions": [
+    "Use --axis 0 (default) or --axis 1. Repeat incremental encoder calibration after each boot.",
+    "Calibration can turn the shaft. Keep the motor unloaded and guarded.",
+    "M1 starts disabled. Verify wiring and fill in the required M1 settings before setting hardware_verified true.",
+    "See README.md for units and optional null values. Shared DC-bus settings are in board.",
+    "A null board.dc_max_positive_current selects the firmware default of unlimited."
+  ],
+  "runtime": {
+    "discovery_timeout_s": 10.0,
+    "idle_timeout_s": 1.0,
+    "idle_poll_s": 0.04,
+    "closed_loop_timeout_s": 1.5,
+    "closed_loop_poll_s": 0.03,
+    "display_every_s": 0.2
+  },
+  "_references": {
+    "commands": "https://github.com/odriverobotics/ODrive/blob/fw-v0.5.1/docs/commands.md",
+    "control": "https://github.com/odriverobotics/ODrive/blob/fw-v0.5.1/docs/control.md",
+    "getting_started": "https://github.com/odriverobotics/ODrive/blob/fw-v0.5.1/docs/getting-started.md",
+    "interface": "https://github.com/odriverobotics/ODrive/blob/fw-v0.5.1/Firmware/odrive-interface.yaml",
+    "encoders": "https://github.com/odriverobotics/ODrive/blob/fw-v0.5.1/docs/encoders.md"
+  },
+  "odrive_serial_number": "3874385D3335",
+  "board": {
+    "brake_resistance": 2.0,
+    "dc_bus_overvoltage_trip_level": 28.0,
+    "dc_max_positive_current": null,
+    "dc_max_negative_current": -1e-06,
+    "max_regen_current": 0.0
+  },
+  "axes": {
+    "m0": {
+      "torque": {
+        "torque_limit_nm": 1.0,
+        "kp": 0.02,
+        "ki": 0.2,
+        "slew_rate_nm_per_s": 1.0,
+        "firmware_limiter_gain": 0.4,
+        "overspeed_ratio": 2.0
+      },
+      "hardware": {
+        "motor_kv": 140.0,
+        "torque_constant": null,
+        "pole_pairs": 7,
+        "cpr": 2000,
+        "bandwidth": 150.0,
+        "calib_range": 0.02,
+        "current_lim": 40.0,
+        "current_lim_margin": 10.0,
+        "calibration_current": 10.0,
+        "resistance_calib_max_voltage": 2.0,
+        "current_control_bandwidth": 230.384,
+        "torque_lim": null,
+        "enable_phase_interpolation": true
+      },
+      "velocity": {
+        "vel_gain": 0.05,
+        "position_vel_gain": 0.2,
+        "vel_integrator_gain": 0.25,
+        "max_command_rpm": 2200.0,
+        "vel_ramp_rate": 0.1,
+        "fast_vel_ramp_rate": 10.0,
+        "fast_ramp_above_rpm": 199.0,
+        "min_command_rpm": 1.0,
+        "controller_min_limit_rpm": 20.0,
+        "controller_headroom_rpm": 20.0,
+        "vel_limit_tolerance": 2.0,
+        "software_min_limit_rpm": 1.0,
+        "software_max_command_factor": 1.12,
+        "software_target_factor": 1.2,
+        "software_headroom_rpm": 10.0,
+        "sample_seconds": 0.07,
+        "count_min_interval_s": 0.012
+      },
+      "safety": {
+        "supply_min_v": 22.0,
+        "supply_max_v": 25.5,
+        "operating_min_v": 21.0,
+        "operating_max_v": 27.5,
+        "watchdog_timeout": 1.5,
+        "max_allowed_current_limit_a": 40.0,
+        "stationary_max_rpm": 3.0,
+        "brake_match_tolerance_ohm": 0.1,
+        "overvoltage_match_tolerance_v": 0.6,
+        "current_match_tolerance_a": 0.02,
+        "torque_constant_match_tolerance_nm_a": 0.003,
+        "bandwidth_match_tolerance": 0.01
+      },
+      "calibration": {
+        "motor_timeout_s": 15.0,
+        "encoder_timeout_s": 20.0,
+        "poll_seconds": 0.05,
+        "max_phase_resistance_ohm": 100.0,
+        "max_phase_inductance_h": 1.0,
+        "settle_timeout_s": 5.0,
+        "settle_hold_s": 0.5
+      },
+      "hardware_verified": true,
+      "encoder_present": true,
+      "sensorless": {
+        "verified": true,
+        "vel_gain": 0.01,
+        "vel_integrator_gain": 0.05
+      },
+      "controller": {
+        "pos_gain": 10.0,
+        "inertia": null,
+        "input_filter_bandwidth": null,
+        "enable_gain_scheduling": null,
+        "gain_scheduling_width": null,
+        "enable_vel_limit": true,
+        "enable_overspeed_error": true,
+        "enable_current_mode_vel_limit": true,
+        "torque_ramp_rate": null
+      },
+      "anticogging": {
+        "anticogging_enabled": false,
+        "calib_pos_threshold": null,
+        "calib_vel_threshold": null
+      }
+    },
+    "m1": {
+      "hardware": {
+        "motor_kv": null,
+        "pole_pairs": null,
+        "cpr": null,
+        "bandwidth": null,
+        "calib_range": null,
+        "current_lim": null,
+        "current_lim_margin": null,
+        "calibration_current": null,
+        "resistance_calib_max_voltage": null,
+        "current_control_bandwidth": null,
+        "torque_lim": null,
+        "enable_phase_interpolation": null
+      },
+      "velocity": {
+        "vel_gain": null,
+        "vel_integrator_gain": null,
+        "max_command_rpm": null,
+        "vel_ramp_rate": null,
+        "fast_vel_ramp_rate": null,
+        "fast_ramp_above_rpm": null,
+        "min_command_rpm": null,
+        "controller_min_limit_rpm": null,
+        "controller_headroom_rpm": null,
+        "vel_limit_tolerance": null,
+        "software_min_limit_rpm": null,
+        "software_max_command_factor": null,
+        "software_target_factor": null,
+        "software_headroom_rpm": null,
+        "sample_seconds": null,
+        "count_min_interval_s": null
+      },
+      "safety": {
+        "supply_min_v": null,
+        "supply_max_v": null,
+        "operating_min_v": null,
+        "operating_max_v": null,
+        "watchdog_timeout": null,
+        "max_allowed_current_limit_a": null,
+        "stationary_max_rpm": null,
+        "brake_match_tolerance_ohm": null,
+        "overvoltage_match_tolerance_v": null,
+        "current_match_tolerance_a": null,
+        "torque_constant_match_tolerance_nm_a": null,
+        "bandwidth_match_tolerance": null
+      },
+      "calibration": {
+        "motor_timeout_s": null,
+        "encoder_timeout_s": null,
+        "poll_seconds": null,
+        "max_phase_resistance_ohm": null,
+        "max_phase_inductance_h": null,
+        "settle_timeout_s": null,
+        "settle_hold_s": null
+      },
+      "hardware_verified": false,
+      "encoder_present": false,
+      "sensorless": {
+        "verified": false,
+        "vel_gain": null,
+        "vel_integrator_gain": null
+      },
+      "controller": {
+        "pos_gain": null,
+        "inertia": null,
+        "input_filter_bandwidth": null,
+        "enable_gain_scheduling": null,
+        "gain_scheduling_width": null,
+        "enable_vel_limit": true,
+        "enable_overspeed_error": true,
+        "enable_current_mode_vel_limit": true,
+        "torque_ramp_rate": null
+      },
+      "anticogging": {
+        "anticogging_enabled": false,
+        "calib_pos_threshold": null,
+        "calib_vel_threshold": null
+      }
+    }
+  }
+}

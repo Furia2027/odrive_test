@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=ODrive Bench
+Comment=Run ODrive motor tests and view live telemetry
+Exec=/home/furia/odrive_test/.venv/bin/python -m ui
+Path=/home/furia/odrive_test
+Icon=/home/furia/odrive_test/ui/odrive-bench.png
+StartupWMClass=Odrivebench
+Terminal=false
+Categories=Utility;Engineering;
